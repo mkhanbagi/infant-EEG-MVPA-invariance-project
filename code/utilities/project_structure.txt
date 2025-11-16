@@ -1,0 +1,433 @@
+.
+├── congruence
+│   ├── code
+│   ├── data
+│   │   ├── pilot
+│   │   ├── preprocessed
+│   │   ├── raw
+│   │   └── sourcedata
+│   ├── derivatives
+│   ├── docs
+│   │   ├── logs
+│   │   ├── reports
+│   │   └── stats
+│   ├── figures
+│   │   ├── backup-repository
+│   │   ├── decoding
+│   │   ├── epochs
+│   │   ├── permutation
+│   │   └── rsa
+│   ├── group
+│   ├── sliding-age-window
+│   └── task
+├── occlusion
+│   ├── code
+│   ├── data
+│   │   ├── pilot
+│   │   │   ├── adults
+│   │   │   │   ├── pilot-01
+│   │   │   │   ├── pilot-02
+│   │   │   │   ├── pilot-03
+│   │   │   │   └── pilot-04
+│   │   │   ├── infants
+│   │   │   │   ├── derivatives
+│   │   │   │   ├── group
+│   │   │   │   ├── pilot-01
+│   │   │   │   ├── pilot-03
+│   │   │   │   ├── pilot-04
+│   │   │   │   └── pilot-2
+│   │   │   └── task
+│   │   │       ├── attention_catcher
+│   │   │       ├── gabor
+│   │   │       └── stimuli
+│   │   ├── preprocessed
+│   │   │   ├── adults
+│   │   │   └── infants
+│   │   │       ├── sub-01
+│   │   │       ├── sub-02
+│   │   │       ├── sub-03
+│   │   │       ├── sub-04
+│   │   │       ├── sub-05
+│   │   │       ├── sub-06
+│   │   │       ├── sub-07
+│   │   │       ├── sub-08
+│   │   │       ├── sub-09
+│   │   │       ├── sub-10
+│   │   │       ├── sub-11
+│   │   │       ├── sub-12
+│   │   │       ├── sub-13
+│   │   │       ├── sub-14
+│   │   │       ├── sub-15
+│   │   │       ├── sub-16
+│   │   │       ├── sub-17
+│   │   │       ├── sub-18
+│   │   │       └── sub-19
+│   │   ├── raw
+│   │   │   ├── adults
+│   │   │   └── infants
+│   │   │       ├── sub-01
+│   │   │       ├── sub-02
+│   │   │       ├── sub-03
+│   │   │       ├── sub-04
+│   │   │       ├── sub-05
+│   │   │       ├── sub-06
+│   │   │       ├── sub-07
+│   │   │       ├── sub-08
+│   │   │       ├── sub-09
+│   │   │       ├── sub-10
+│   │   │       ├── sub-11
+│   │   │       ├── sub-12
+│   │   │       ├── sub-13
+│   │   │       ├── sub-14
+│   │   │       ├── sub-15
+│   │   │       ├── sub-16
+│   │   │       ├── sub-17
+│   │   │       ├── sub-18
+│   │   │       └── sub-19
+│   │   └── sourcedata
+│   ├── derivatives
+│   ├── docs
+│   │   ├── logs
+│   │   ├── reports
+│   │   └── stats
+│   ├── figures
+│   │   ├── backup-repository
+│   │   ├── decoding
+│   │   ├── epochs
+│   │   ├── permutation
+│   │   ├── rsa-correlation-model-RDMs
+│   │   └── rsa-temporal-generalisation
+│   ├── group
+│   ├── sliding-age-window
+│   └── task
+│       ├── attention-catcher
+│       ├── data-rescue
+│       │   ├── csv_files_backup
+│       │   ├── csv_files_recoded
+│       │   ├── sanity_check
+│       │   │   ├── new_results_old_pipeline
+│       │   │   ├── sub-01_new
+│       │   │   └── sub-01_old
+│       │   └── screenshots
+│       │       ├── block-01
+│       │       ├── block-02
+│       │       ├── block-03
+│       │       ├── block-04
+│       │       └── block-05
+│       ├── log
+│       ├── stimuli
+│       └── stimuli-workspace
+│           ├── 3D-models
+│           │   ├── balls
+│           │   ├── dog-toy
+│           │   ├── koala-plush-toy
+│           │   ├── phone-toy
+│           │   ├── Pomeranian-Boo_toy
+│           │   ├── rabbit-toy
+│           │   ├── rocket-toy
+│           │   ├── stacking_toy(1)
+│           │   ├── stacking-toy(2)
+│           │   ├── toy-penguin
+│           │   └── toy-rocket
+│           ├── adjusted-images
+│           ├── demo
+│           ├── draft-space
+│           │   ├── DeepSeek_Blue
+│           │   ├── four-occluder-positions
+│           │   ├── GPT_Red
+│           │   ├── Occluders
+│           │   ├── Original_Colorful
+│           │   ├── Step2-brightness_adjusted
+│           │   └── V1_rescaled(the whole image not the object)
+│           ├── final-version-metrics
+│           ├── raw-images
+│           ├── scripts
+│           └── vault
+│               ├── attention-catchers
+│               ├── check_brightness
+│               ├── gabor-filters
+│               ├── original images
+│               ├── step1-grayscale_normalise_brightness
+│               ├── step2-overlay_colored_mask
+│               └── step3-rescaled
+├── shared
+│   ├── config
+│   ├── docs
+│   │   ├── flyer
+│   │   ├── forms
+│   │   └── payments
+│   ├── func
+│   └── utilities
+│       ├── matlab-rep
+│       ├── PairWisePipeline_QC
+│       │   ├── new_code
+│       │   └── old_code
+│       ├── python-rep
+│       ├── r-rep
+│       │   └── Almu_Stat
+│       └── templates
+└── viewpoint
+    ├── code
+    ├── data
+    │   ├── pilot
+    │   │   ├── adult-pilot-01
+    │   │   │   ├── code
+    │   │   │   ├── derivatives
+    │   │   │   ├── raw
+    │   │   │   └── task
+    │   │   ├── adult-pilot-02
+    │   │   │   ├── code
+    │   │   │   ├── derivatives
+    │   │   │   ├── raw
+    │   │   │   └── task
+    │   │   ├── infants-pilot-01 (poorani)
+    │   │   ├── infants-pilot-02 (mina)
+    │   │   │   ├── eeglab_cosmo
+    │   │   │   ├── mne
+    │   │   │   ├── raw_Biosemi
+    │   │   │   └── raw_RNet
+    │   │   ├── infants-pilot-03 (empty cap - wet)
+    │   │   ├── infants-pilot-04 (empty cap - dry)
+    │   │   ├── infants-pilot-05 (jeremy - kingswood pilot test 1)
+    │   │   └── infants-pilot-06 (jeremy - kingswood pilot test 2)
+    │   ├── preprocessed
+    │   │   ├── adults
+    │   │   │   ├── sub-01
+    │   │   │   ├── sub-02
+    │   │   │   ├── sub-03
+    │   │   │   ├── sub-04
+    │   │   │   ├── sub-05
+    │   │   │   ├── sub-06
+    │   │   │   ├── sub-07
+    │   │   │   ├── sub-08
+    │   │   │   ├── sub-09
+    │   │   │   ├── sub-10
+    │   │   │   ├── sub-11
+    │   │   │   ├── sub-12
+    │   │   │   ├── sub-13
+    │   │   │   ├── sub-14
+    │   │   │   ├── sub-15
+    │   │   │   ├── sub-16
+    │   │   │   ├── sub-17
+    │   │   │   ├── sub-18
+    │   │   │   ├── sub-19
+    │   │   │   └── sub-20
+    │   │   └── infants
+    │   │       ├── sub-01
+    │   │       ├── sub-02
+    │   │       ├── sub-03
+    │   │       ├── sub-04
+    │   │       ├── sub-05
+    │   │       ├── sub-06
+    │   │       ├── sub-07
+    │   │       ├── sub-08
+    │   │       ├── sub-09
+    │   │       ├── sub-10
+    │   │       ├── sub-11
+    │   │       ├── sub-12
+    │   │       ├── sub-13
+    │   │       ├── sub-14
+    │   │       ├── sub-15
+    │   │       ├── sub-16
+    │   │       ├── sub-17
+    │   │       ├── sub-18
+    │   │       ├── sub-19
+    │   │       ├── sub-20
+    │   │       ├── sub-21
+    │   │       ├── sub-22
+    │   │       ├── sub-23
+    │   │       ├── sub-24
+    │   │       ├── sub-25
+    │   │       ├── sub-26
+    │   │       ├── sub-27
+    │   │       ├── sub-28
+    │   │       ├── sub-29
+    │   │       ├── sub-30
+    │   │       ├── sub-31
+    │   │       ├── sub-32
+    │   │       ├── sub-33
+    │   │       ├── sub-34
+    │   │       ├── sub-35
+    │   │       ├── sub-36
+    │   │       ├── sub-37
+    │   │       ├── sub-38
+    │   │       ├── sub-39
+    │   │       ├── sub-40
+    │   │       ├── sub-41
+    │   │       ├── sub-42
+    │   │       ├── sub-43
+    │   │       ├── sub-44
+    │   │       ├── sub-45
+    │   │       ├── sub-46
+    │   │       ├── sub-47
+    │   │       ├── sub-48
+    │   │       ├── sub-49
+    │   │       ├── sub-50
+    │   │       ├── sub-51
+    │   │       ├── sub-52
+    │   │       ├── sub-53
+    │   │       └── sub-54
+    │   ├── raw
+    │   │   ├── adults
+    │   │   │   ├── sub-01
+    │   │   │   ├── sub-02
+    │   │   │   ├── sub-03
+    │   │   │   ├── sub-04
+    │   │   │   ├── sub-05
+    │   │   │   ├── sub-06
+    │   │   │   ├── sub-07
+    │   │   │   ├── sub-08
+    │   │   │   ├── sub-09
+    │   │   │   ├── sub-10
+    │   │   │   ├── sub-11
+    │   │   │   ├── sub-12
+    │   │   │   ├── sub-13
+    │   │   │   ├── sub-14
+    │   │   │   ├── sub-15
+    │   │   │   ├── sub-16
+    │   │   │   ├── sub-17
+    │   │   │   ├── sub-18
+    │   │   │   ├── sub-19
+    │   │   │   └── sub-20
+    │   │   └── infants
+    │   │       ├── sub-01
+    │   │       ├── sub-02
+    │   │       ├── sub-03
+    │   │       ├── sub-04
+    │   │       ├── sub-05
+    │   │       ├── sub-06
+    │   │       ├── sub-07
+    │   │       ├── sub-08
+    │   │       ├── sub-09
+    │   │       ├── sub-10
+    │   │       ├── sub-11
+    │   │       ├── sub-12
+    │   │       ├── sub-13
+    │   │       ├── sub-14
+    │   │       ├── sub-15
+    │   │       ├── sub-16
+    │   │       ├── sub-17
+    │   │       ├── sub-18
+    │   │       ├── sub-19
+    │   │       ├── sub-20
+    │   │       ├── sub-21
+    │   │       ├── sub-22
+    │   │       ├── sub-23
+    │   │       ├── sub-24
+    │   │       ├── sub-25
+    │   │       ├── sub-26
+    │   │       ├── sub-27
+    │   │       ├── sub-28
+    │   │       ├── sub-29
+    │   │       ├── sub-30
+    │   │       ├── sub-31
+    │   │       ├── sub-32
+    │   │       ├── sub-33
+    │   │       ├── sub-34
+    │   │       ├── sub-35
+    │   │       ├── sub-36
+    │   │       ├── sub-37
+    │   │       ├── sub-38
+    │   │       ├── sub-39
+    │   │       ├── sub-40
+    │   │       ├── sub-41
+    │   │       ├── sub-42
+    │   │       ├── sub-43
+    │   │       ├── sub-44
+    │   │       ├── sub-45
+    │   │       ├── sub-46
+    │   │       ├── sub-47
+    │   │       ├── sub-48
+    │   │       ├── sub-49
+    │   │       ├── sub-50
+    │   │       ├── sub-51
+    │   │       ├── sub-52
+    │   │       ├── sub-53
+    │   │       └── sub-54
+    │   └── sourcedata
+    ├── derivatives
+    ├── docs
+    │   ├── logs
+    │   ├── reports
+    │   └── stats
+    ├── figures
+    │   ├── backup-repository
+    │   │   ├── EEGLAB-MNE(QC)
+    │   │   ├── expired
+    │   │   │   ├── Last_Block_In
+    │   │   │   ├── V1_ACNS
+    │   │   │   └── V2_SD(no-bl-corr)
+    │   │   ├── group_analysis_history
+    │   │   │   ├── BF_practice
+    │   │   │   ├── mne_infant_pipeline(avg27)
+    │   │   │   ├── n=33, n=35
+    │   │   │   ├── n=40
+    │   │   │   ├── n=43
+    │   │   │   ├── n=44
+    │   │   │   └── no_baseline_correction
+    │   │   ├── latest-version-old-graphics
+    │   │   │   ├── all(python)
+    │   │   │   ├── animacy
+    │   │   │   ├── entropy
+    │   │   │   ├── luminance
+    │   │   │   ├── objects
+    │   │   │   ├── pw-objects
+    │   │   │   └── size
+    │   │   ├── pilot_resutls
+    │   │   └── time_collapsed
+    │   ├── decoding
+    │   ├── epochs
+    │   ├── permutation
+    │   ├── rsa-correlation-model-RDMs
+    │   └── rsa-temporal-generalisation
+    ├── group
+    ├── sliding-age-analysis
+    └── task
+        ├── attention-catcher
+        ├── stimuli
+        ├── stimuli-targets
+        └── stimuli-workspace
+            ├── 3D-models
+            │   ├── Animal
+            │   ├── Face
+            │   ├── Furniture
+            │   ├── screenshots
+            │   ├── selected
+            │   ├── Shape
+            │   └── Toy
+            ├── adjusted-images
+            ├── demo
+            ├── draft-space
+            │   ├── chair
+            │   ├── deer
+            │   ├── dog
+            │   ├── dolphin
+            │   ├── lamp
+            │   ├── lion
+            │   ├── Llama
+            │   ├── pigeon
+            │   ├── rabbit
+            │   ├── rabbit2
+            │   ├── sofa
+            │   ├── toy_piano
+            │   ├── toy_plane
+            │   ├── toy_tower
+            │   ├── toy_train
+            │   └── xylophone
+            ├── metrics
+            │   ├── animate
+            │   ├── inanimate
+            │   ├── plots-history
+            │   ├── scripts
+            │   └── tables
+            ├── raw-images
+            ├── scripts
+            └── vault
+                ├── blender_practice
+                ├── extended_version
+                ├── pilot_stimuli
+                ├── stimuli_v1
+                ├── stimuli_v2
+                └── studio object locations
+
+431 directories

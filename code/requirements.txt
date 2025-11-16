@@ -1,0 +1,105 @@
+
+## **requirements.txt for Occlusion**
+
+# MATLAB Occlusion Experiment - Dependencies
+# ==========================================
+# Required software and toolboxes for running the occlusion decoding analysis
+# Last updated: October 2025
+
+# MATLAB Version
+# --------------
+MATLAB>=R2024b
+
+# Core Toolboxes (Required)
+# --------------------------
+Signal_Processing_Toolbox>=9.0
+Statistics_and_Machine_Learning_Toolbox>=12.0
+Image_Processing_Toolbox>=11.0
+
+# External Dependencies (Required)
+# ---------------------------------
+EEGLAB==2025.0
+# Download: https://sccn.ucsd.edu/eeglab/download.php
+# Installation: Add to MATLAB path via eeglab.m
+
+CoSMoMVPA>=2016
+# Download: https://www.cosmomvpa.org/download.html
+# Installation: cosmo_set_path()
+# Copyright: Nikolass N. Oosterhof (2013-2024)
+
+# EEGLAB Plugins (Required)
+# --------------------------
+clean_rawdata>=2.7
+# Download: https://github.com/sccn/clean_rawdata
+# Installation: Via EEGLAB plugin manager
+# HIGHLY RECOMMENDED for infant data (automatic artifact rejection)
+
+# Optional Toolboxes
+# ------------------
+Parallel_Computing_Toolbox>=7.0  # For batch processing multiple subjects
+Optimization_Toolbox>=9.0         # For advanced classifiers (SVM, etc.)
+
+# Python Dependencies (Optional, for visualization)
+# -------------------------------------------------
+# If using Python for additional analyses or figure generation:
+# python>=3.8
+# numpy>=1.21.0
+# scipy>=1.7.0
+# matplotlib>=3.4.0
+# seaborn>=0.11.0
+# mne>=1.0.0
+
+# EEG File Format Support
+# -----------------------
+# BrainVision: Built into EEGLAB (pop_loadxdf)
+#   - Used for infant data
+#   - File format: .xdf
+#   - Filename pattern: sub-PXXX_ses-S001_task-Default_run-001_eeg.xdf
+#
+# BioSemi: Built into EEGLAB (pop_readbdf, pop_biosig)
+#   - Used for adult data
+#   - File format: .bdf
+#   - Filename pattern: subXX_*.bdf
+
+# System Requirements
+# -------------------
+# RAM: 16GB minimum, 32GB recommended (for RSA/RDM analyses)
+# Storage: 30GB free space (for preprocessed data and derivatives)
+# OS: Windows 10/11, macOS 10.15+, Linux (Ubuntu 20.04+)
+# Display: Color monitor for viewing stimuli and verifying preprocessing
+
+# Special Notes for Occlusion Experiment
+# ---------------------------------------
+# 1. Trigger remapping required for subjects 1-18
+#    - Handled automatically via triggers_remapped.csv
+#    - Located in: occlusion/docs/triggers_remapped.csv
+#
+# 2. Custom partitioner function for cross-condition generalization
+#    - train_intact_test_occl.m must be on MATLAB path
+#    - Tests invariance by training on intact, testing on occluded
+#
+# 3. Clean Rawdata plugin essential for infant data
+#    - Infants have more motion artifacts
+#    - Automatic bad channel detection critical
+#
+# 4. Memory considerations for RDM construction
+#    - 4×4 identity RDM: ~6 pairwise comparisons
+#    - Requires sufficient RAM for temporal generalization
+#
+# 5. GPU support optional but beneficial
+#    - Speeds up permutation testing (100+ iterations)
+#    - Not required but recommended for large-scale analyses
+
+# Experimental Design Specifics
+# ------------------------------
+# Stimuli: 64 unique (4 identities × 2 colors × 8 variations)
+# Occlusion: 50% intact, 50% occluded per block
+# Occluders: Gabor patches (low/high spatial frequency, left/right position)
+# Trial duration: 500ms stimulus + 800-1200ms ISI
+
+# Data Quality Notes
+# ------------------
+# - Infant data: Expect 40-60% trial retention after artifact rejection
+# - Adult data: Expect 80-95% trial retention
+# - Minimum 1 valid block required for single-subject analysis
+# - Recommended: 2+ blocks for reliable decoding estimates

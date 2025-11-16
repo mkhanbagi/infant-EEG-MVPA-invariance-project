@@ -1,0 +1,176 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created_date": "2025-07-29",
+    "description": "Group analysis configuration for viewpoint study",
+    "total_subjects": 75
+  },
+  "paths": {
+    "home": "/Users/22095708",
+    "project_root": "/Users/22095708/Documents/PhD/Project/viewpoint",
+    "preproc_dir": "/Users/22095708/Documents/PhD/Project/viewpoint/data/preprocessed"
+  },
+  "stimuli": {
+    "total_count": 112,
+    "categories": {
+      "animate": [2, 3, 4, 5, 7, 8, 9],
+      "inanimate": [1, 6, 10, 11, 12, 13, 14],
+      "low_entropy": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 26, 27, 28, 29, 30, 31, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 51, 52, 53, 54, 62, 63, 73, 74, 79, 80, 81, 84, 88, 105, 106, 110, 111, 112],
+      "high_entropy": [17, 18, 19, 20, 21, 22, 23, 24, 25, 32, 49, 50, 55, 56, 57, 58, 59, 60, 61, 64, 65, 66, 67, 68, 69, 70, 71, 72, 75, 76, 77, 78, 82, 83, 85, 86, 87, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109],
+      "low_luminance": [2, 3, 4, 5, 6, 7, 17, 18, 19, 25, 32, 41, 42, 43, 44, 46, 47, 48, 49, 50, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 81, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 108, 109],
+      "high_luminance": [1, 8, 9, 10, 11, 12, 13, 14, 15, 16, 20, 21, 22, 23, 24, 26, 27, 28, 29, 30, 31, 33, 34, 35, 36, 37, 38, 39, 40, 45, 51, 52, 53, 54, 62, 63, 73, 74, 75, 76, 77, 78, 79, 80, 82, 83, 84, 85, 86, 87, 105, 106, 107, 110, 111, 112]
+    }
+  },
+  "decode_types": [
+    {
+      "name": "category",
+      "n_classes": 2,
+      "acc_main": "#506A5F", 
+      "acc_shade": "#D6DBAB",
+      "bf_max": "#FF2600",
+      "decode_methods": ["one_block_out", "one_rotation_out"]
+    },
+    {
+      "name": "pw_category",
+      "n_classes": 2,
+      "acc_main": "#506A5F", 
+      "acc_shade": "#D6DBAB",
+      "bf_max": "#FF2600",
+      "decode_methods": ["one_block_out", "one_rotation_out"]
+    },
+    {
+      "name": "identity",
+      "n_classes": 14,
+      "acc_main": "#FFA800",
+      "acc_shade": "#FFD479",
+      "bf_max": "#FF2600",
+      "decode_methods": ["one_block_out", "one_rotation_out"]
+    },
+    {
+      "name": "pw_identity",
+      "n_classes": 2,
+      "decode_methods": ["one_block_out", "one_rotation_out"],
+      "pairwise_modes": [
+        {
+          "mode": "all",
+          "acc_main": "#FFA800",
+          "acc_shade": "#FFD479",
+          "bf_max": "#FF2600"
+        }, 
+        {
+          "mode": "hetero",
+          "acc_main": "#506A5F", 
+          "acc_shade": "#D6DBAB",
+          "bf_max": "#FF2600"
+        }, 
+        {
+          "mode": "animate_only",
+          "acc_main": "#3EB9A3",
+          "acc_shade": "#A2D4C8",
+          "bf_max": "#FF2600"
+        },
+        {
+          "mode": "inanimate_only",
+          "acc_main": "#E35700",
+          "acc_shade": "#E0A563",
+          "bf_max": "#FF2600"
+        }
+      ]
+    },
+    {
+      "name": "entropy",
+      "n_classes": 2,
+      "acc_main": "#787465",
+      "acc_shade": "#C8C0A3", 
+      "bf_max": "#514F4A",
+      "decode_methods": ["one_block_out"]
+    },
+    {
+      "name": "luminance",
+      "n_classes": 2,
+      "acc_main": "#787465",
+      "acc_shade": "#C8C0A3", 
+      "bf_max": "#514F4A",
+      "decode_methods": ["one_block_out"]
+    },
+    {
+      "name": "size_2class",
+      "n_classes": 2,
+      "acc_main": "#787465",
+      "acc_shade": "#C8C0A3", 
+      "bf_max": "#514F4A",
+      "decode_methods": ["one_block_out"]
+    },
+    {
+      "name": "size_3class",
+      "n_classes": 3,
+      "acc_main": "#787465",
+      "acc_shade": "#C8C0A3", 
+      "bf_max": "#514F4A",
+      "decode_methods": ["one_block_out"]
+    }
+  ],
+  "analysis_options": {
+    "plot_results": true,
+    "save_file": true,
+    "overwrite": true
+  },
+  "groups": {
+    "infants": {
+      "folder": "infants",
+      "n_subjects": 54,
+       "read_resfile_header": false,
+      "excluded_subjects": [40, 41, 55],
+      //"inclusion_status": [1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+      "samples": {
+        "under_6mo": [7, 29],
+        "6mo": [1, 2, 3, 5, 6, 8, 9, 10, 11, 12, 13, 14, 16, 17, 20, 21, 23, 24, 25, 26, 27, 28, 38, 39, 42, 43, 44, 45, 49, 51, 52, 53, 54],
+        "7mo": [4, 15, 18, 19, 22, 36, 37, 40, 41, 46, 47, 48, 50],
+        "8mo": [30, 31, 33, 34],
+        "9mo": [32],
+        "over_9mo": [35],
+        "6mo_robust": [1, 8, 9, 12, 14, 26, 39, 44, 53, 54],
+        "all": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54]
+      },
+      "colors": {
+        "acc_main": "#FFA800",
+        "acc_shade": "#FFD479",
+        "bf_max": "#FF2600"
+      }
+    },
+    "adults": {
+      "folder": "adults",
+      "n_subjects": 20,
+      "read_resfile_header": true,
+      "excluded_subjects": [],
+      //"inclusion_status": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      "samples":{
+        "all": [1, 2, 3, 4, 5, 6, 7,  8,  9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] //which(inclusion_status == 1)
+      },
+        "colors": {
+        "acc_main": "#AB0172",
+        "acc_shade": "#E383BF",
+        "bf_max": "#AB0172"
+      }
+    }
+  },
+  "default_sample_combinations": {
+    "infants": [
+      ["6mo"],
+      ["7mo"],
+      ["8mo"],
+      ["6mo", "7mo"],
+      ["6mo", "7mo", "8mo"],
+      ["8mo", "9mo", "over_9mo"],
+      ["under_6mo", "6mo", "7mo", "8mo", "9mo", "over_9mo"]
+    ],
+    "adults": [
+      ["all"]
+    ]
+  },
+  "validation": {
+    "required_fields": ["paths", "stimuli", "decode_types", "groups"],
+    "min_subjects": 1,
+    "valid_decode_methods": ["one_block_out", "one_rotation_out"]
+  }
+}

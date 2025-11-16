@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created_date": "2025-09-29",
+    "description": "Group analysis configuration for occlusion study",
+    "total_subjects": 19
+  },
+  "paths": {
+    "HOME": "/Users/22095708",
+    "project_root": "/Users/22095708/Documents/PhD/Project/occlusion",
+    "preproc_dir": "/Users/22095708/Documents/PhD/Project/occlusion/data/preprocessed"
+  },
+  "stimuli": {
+    "total_nstimuli": 64,
+    "stimnum": {
+      "category": {
+        "face": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32],
+        "nonface": [33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64]
+      },
+      "identity": {
+        "bear": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+        "penguin": [17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32],
+        "rocket": [33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48],
+        "tower": [49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64]
+      },
+      "color": {
+        "blue": [1, 2, 3, 4, 5, 6, 7, 8, 17, 18, 19, 20, 21, 22, 23, 24, 33, 34, 35, 36, 37, 38, 39, 40, 49, 50, 51, 52, 53, 54, 55, 56],
+        "pink": [9, 10, 11, 12, 13, 14, 15, 16, 25, 26, 27, 28, 29, 30, 31, 32, 41, 42, 43, 44, 45, 46, 47, 48, 57, 58, 59, 60, 61, 62, 63, 64]
+      },
+      "occl_level": {
+        "occluded": [1, 2, 7, 8, 9, 10, 15, 16, 17, 18, 23, 24, 25, 26, 31, 32, 33, 34, 39, 40, 41, 42, 47, 48, 49, 50, 55, 56, 57, 58, 63, 64],
+        "intact": [3, 4, 5, 6, 11, 12, 13, 14, 19, 20, 21, 22, 27, 28, 29, 30, 35, 36, 37, 38, 43, 44, 45, 46, 51, 52, 53, 54, 59, 60, 61, 62]
+      },
+      "occl_pos": {
+        "right": [1, 7, 9, 15, 17, 23, 25, 31, 33, 39, 41, 47, 49, 55, 57, 63],
+        "left": [2, 8, 10, 16, 18, 24, 26, 32, 34, 40, 42, 48, 50, 56, 58, 64]
+      },
+      "occl_sfreq": {
+        "low": [1, 2, 7, 8, 9, 10, 15, 16, 17, 18, 23, 24, 25, 26, 31, 32, 33, 34, 39, 40, 41, 42, 47, 48, 49, 50, 55, 56, 57, 58, 63, 64],
+        "high": [7, 8, 15, 16, 23, 24, 31, 32, 39, 40, 47, 48, 55, 56, 63, 64]
+      }
+    }
+  },
+  "trigger_map": "docs/triggers_remapped.csv",
+  "map_key": {
+    "occl_level": {
+      "occluded": [],
+      "intact": []
+    },
+    "occl_pos": {
+      "right": [],
+      "left": []
+    },
+    "occl_sfreq": {
+      "high": [],
+      "low": []
+    }
+  },
+  "decode_type": [
+    {
+      "name": "category",
+      "n_classes": 2,
+      "decode_method": "one_block_out",
+      "versions": ["all_all", "intact_intact", "intact_occl"],
+      "acc_main": "#506A5F",
+      "acc_shade": "#D6DBAB",
+      "bf_max": "#FF2600"
+    },
+    {
+      "name": "identity",
+      "n_classes": 4,
+      "decode_method": "one_block_out",
+      "versions": ["all_all", "intact_intact", "intact_occl"],
+      "acc_main": "#FFA800",
+      "acc_shade": "#FFD479",
+      "bf_max": "#FF2600"
+    },
+    {
+      "name": "pw_identity",
+      "n_classes": 2,
+      "decode_method": "one_block_out",
+      "versions": ["all_all", "intact_intact", "intact_occl"],
+      "acc_main": "#FFA800",
+      "acc_shade": "#FFD479",
+      "bf_max": "#FF2600"
+    },
+    {
+      "name": "color",
+      "n_classes": 2,
+      "decode_method": "one_block_out",
+      "versions": ["all_all", "intact_intact", "intact_occl"],
+      "acc_main": "#8B2193",
+      "acc_shade": "#DFB6ED",
+      "bf_max": "#FF2600"
+    },
+    {
+      "name": "size",
+      "n_classes": 2,
+      "decode_method": "one_block_out",
+      "versions": ["all_all", "intact_intact", "intact_occl"],
+      "acc_main": "#A72F00",
+      "acc_shade": "#F9D1D0",
+      "bf_max": "#FF2600"
+    },
+    {
+      "name": "occl_level",
+      "n_classes": 2,
+      "decode_method": "one_block_out",
+      "versions": ["all_all"],
+      "acc_main": "#000000",
+      "acc_shade": "#D5D5D5",
+      "bf_max": "#FF2600"
+    },
+    {
+      "name": "occl_pos",
+      "n_classes": 2,
+      "decode_method": "one_block_out",
+      "versions": ["occl_only"],
+      "acc_main": "#006699",
+      "acc_shade": "#B0F2FF",
+      "bf_max": "#FF2600"
+    },
+    {
+      "name": "occl_sfreq",
+      "n_classes": 2,
+      "decode_method": "one_block_out",
+      "versions": ["occl_only"],
+      "acc_main": "#000000",
+      "acc_shade": "#D5D5D5",
+      "bf_max": "#FF2600"
+    }
+  ],
+  "plot_results": 1,
+  "savefile": 1,
+  "overwrite": 1,
+  "groups": {
+    "infants": {
+      "folder": "infants",
+      "n_subjects": 20,
+      "isgood": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      "excluded_subjects": [18],
+      "res_color": "#FFA800",
+      "res_shade": "#FFD479",
+      "bf_max": "#FF2600",
+      "samples": {
+        "6mo": [10, 11],
+        "7mo": [1, 2, 3, 4, 6, 7, 8, 9, 12, 14],
+        "8mo": [5, 13, 15, 16, 17, 18, 19, 20],
+        "all": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+      }
+    },
+    "adults": {
+      "folder": "adults",
+      "n_subjects": 0,
+      "isgood": [],
+      "excluded_subjects": [],
+      "res_color": "#AB0172",
+      "res_shade": "#E383BF",
+      "bf_max": "#0433FF"
+    }
+  }
+}
